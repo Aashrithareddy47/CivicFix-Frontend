@@ -2,7 +2,7 @@
 import "./AdminDashboard.css";
 import React, { useEffect, useMemo, useState } from "react";
 
-const API_URL = "http://localhost:8080/api/issues";
+const API_URL = "https://civicfix-backend-vo7n.onrender.com/api/issues";
 
 const STATUSES = ["Reported", "Verified", "Assigned", "Resolved"];
 

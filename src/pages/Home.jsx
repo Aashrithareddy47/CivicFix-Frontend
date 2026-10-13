@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Home.css";
 
-const API = "http://localhost:8080/api/issues";
+const API = "https://civicfix-backend-vo7n.onrender.com/api/issues";
 
 function getLoggedInEmail() {
   const storedUser = localStorage.getItem("user");

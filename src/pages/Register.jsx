@@ -40,7 +40,7 @@ function Register() {
             setLoading(true);
 
             const response = await fetch(
-                "http://localhost:8080/api/auth/register",
+                "https://civicfix-backend-vo7n.onrender.com/api/auth/register",
                 {
                     method: "POST",
                     headers: {

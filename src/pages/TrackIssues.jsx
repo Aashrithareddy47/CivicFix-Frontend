@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./TrackIssues.css";
 
-const API_URL = "http://localhost:8080/api/issues";
+const API_URL = "https://civicfix-backend-vo7n.onrender.com/api/issues";
 
 function getLoggedInEmail() {
   const storedUser = localStorage.getItem("user");
@@ -72,8 +72,7 @@ export default function TrackIssues() {
 
   // Force navigation directly to the Home page
   const goToHome = () => {
-    window.location.href = "http://localhost:5173/home";
-  };
+   window.location.href = "/home";
 
   // Open the Report Issue page
   const goToReportIssue = () => {
@@ -400,4 +399,5 @@ export default function TrackIssues() {
       </footer>
     </div>
   );
+}
 }

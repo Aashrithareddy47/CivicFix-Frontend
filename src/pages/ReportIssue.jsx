@@ -3,8 +3,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ReportIssue.css";
 
-const API_URL = "http://localhost:8080/api/issues";
-const AI_URL = "http://localhost:8080/api/ai/analyze";
+const API_URL = "https://civicfix-backend-vo7n.onrender.com/api/issues";
+const AI_URL = "https://civicfix-backend-vo7n.onrender.com/api/ai/analyze";
 
 function getLoggedInEmail() {
   const storedUser = localStorage.getItem("user");
