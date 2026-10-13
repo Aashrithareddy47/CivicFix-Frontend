@@ -70,9 +70,10 @@ export default function TrackIssues() {
   const [error, setError] = useState("");
   const [filter, setFilter] = useState("All");
 
-  // Force navigation directly to the Home page
+  // Navigate to the Home page
   const goToHome = () => {
-   window.location.href = "/home";
+    navigate("/home");
+  };
 
   // Open the Report Issue page
   const goToReportIssue = () => {
@@ -399,5 +400,4 @@ export default function TrackIssues() {
       </footer>
     </div>
   );
-}
 }
