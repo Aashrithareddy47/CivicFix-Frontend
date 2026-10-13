@@ -36,7 +36,7 @@ function Login() {
       setLoading(true);
 
       const response = await fetch(
-        "https://civicfix-backend-vo7n.onrender.com/api/auth/login",
+       "https://civicfix-backend-vo7n.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {
