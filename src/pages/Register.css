@@ -1,0 +1,311 @@
+/* =========================================
+   CIVICFIX REGISTER PAGE — GREEN THEME
+========================================= */
+
+.register-page {
+  min-height: 100vh;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #e6f8f1, #f5fffc, #ffffff);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #173c38;
+}
+
+.register-page *,
+.register-page *::before,
+.register-page *::after {
+  box-sizing: border-box;
+}
+
+/* Registration card */
+
+.register-card {
+  width: min(100%, 620px);
+  padding: 28px 32px;
+  border: 1px solid #d2eee5;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(8, 126, 105, 0.11);
+}
+
+/* Heading */
+
+.register-heading {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.register-heading h1 {
+  margin: 0 0 8px;
+  color: #174b42;
+  font-size: clamp(27px, 4vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.register-heading p {
+  margin: 0;
+  color: #658078;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Citizen and Admin selection */
+
+.register-roles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 25px;
+  padding: 6px;
+  border: 1px solid #d7eee6;
+  border-radius: 10px;
+  background: #edf8f4;
+}
+
+.register-role {
+  min-height: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #668078;
+  font-size: 17px;
+  font-weight: 650;
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.register-role.selected {
+  border-color: #bce8d9;
+  background: #d8f4e9;
+  color: #087e68;
+}
+
+.register-role:hover {
+  color: #087e68;
+}
+
+.register-role:focus-visible {
+  outline: 2px solid #0d9f88;
+  outline-offset: 2px;
+}
+
+.role-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* Form */
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-card form label {
+  margin: 0 0 7px;
+  color: #244b42;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.register-card form input {
+  width: 100%;
+  min-height: 47px;
+  margin: 0 0 19px;
+  padding: 11px 14px;
+  border: 1.5px solid #d3e7df;
+  border-radius: 8px;
+  outline: none;
+  background: #f8fcfa;
+  color: #173c38;
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-card form input::placeholder {
+  color: #8ba59b;
+  opacity: 1;
+}
+
+.register-card form input:focus {
+  border-color: #0da58e;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(13, 165, 142, 0.12);
+}
+
+/* Action buttons */
+
+.register-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1px;
+}
+
+.register-back,
+.register-next {
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.register-back {
+  border: 1px solid #d3e7df;
+  background: #f0f8f4;
+  color: #547168;
+}
+
+.register-back:hover {
+  transform: translateY(-1px);
+  background: #e2f4ec;
+}
+
+.register-next {
+  border: 1px solid #079b8e;
+  background: #079b8e;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(7, 155, 142, 0.12);
+}
+
+.register-next:hover {
+  transform: translateY(-1px);
+  background: #087e75;
+}
+
+.register-next:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+/* Error message */
+
+.register-error {
+  margin: -5px 0 18px;
+  color: #c0392b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Sign-in link */
+
+.register-signin {
+  margin: 18px 0 0;
+  color: #58746b;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.register-signin a {
+  color: #078f83;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-signin a:hover {
+  color: #066d62;
+  text-decoration: underline;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .register-page {
+    padding: 20px 12px;
+    justify-content: center;
+  }
+
+  .register-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 24px 19px;
+  }
+
+  .register-heading {
+    margin-bottom: 23px;
+  }
+
+  .register-heading h1 {
+    font-size: 27px;
+  }
+
+  .register-heading p {
+    font-size: 14px;
+  }
+
+  .register-roles {
+    margin-bottom: 23px;
+  }
+
+  .register-role {
+    min-height: 74px;
+    font-size: 16px;
+  }
+
+  .role-icon {
+    font-size: 24px;
+  }
+
+  .register-card form label {
+    font-size: 14px;
+  }
+
+  .register-card form input {
+    min-height: 45px;
+    margin-bottom: 17px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .register-back,
+  .register-next {
+    min-height: 43px;
+    padding: 0 17px;
+    font-size: 14px;
+  }
+
+  .register-signin {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+}
+
+/* Extra-small phones */
+
+@media (max-width: 360px) {
+  .register-card {
+    padding: 22px 15px;
+  }
+
+  .register-heading h1 {
+    font-size: 25px;
+  }
+
+  .register-actions {
+    gap: 8px;
+  }
+
+  .register-back,
+  .register-next {
+    padding: 0 13px;
+  }
+}
